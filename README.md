@@ -3,6 +3,10 @@ Détectez des faux billets avec R ou Python
 
 # Identification Automatique des Faux Billets - Projet ONCFM
 
+## Aperçu de l'entreprise
+
+![Aperçu du site web](images/DA_projet10.PNG)
+
 ## Contexte
 
 Je suis consultant Data Analyst au sein d'une entreprise spécialisée dans la data, et je réalise actuellement une mission en régie pour l'**Organisation nationale de lutte contre le faux-monnayage (ONCFM)**. Cette institution cherche à mettre en place une modélisation capable d'identifier automatiquement les faux billets en euros en se basant uniquement sur certaines dimensions et caractéristiques physiques des billets.
