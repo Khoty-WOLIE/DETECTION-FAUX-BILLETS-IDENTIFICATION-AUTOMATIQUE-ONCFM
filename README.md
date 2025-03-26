@@ -1,83 +1,81 @@
-# OPC_DATA_ANALYST_PROJET10
-Détectez des faux billets avec R ou Python
-
-# Identification Automatique des Faux Billets - Projet ONCFM
-
 ## Aperçu de l'entreprise
 
 ![Aperçu du site web](images/DA_projet10.PNG)
 
-## Contexte
+## 📌 Contexte professionnel
 
-Je suis consultant Data Analyst au sein d'une entreprise spécialisée dans la data, et je réalise actuellement une mission en régie pour l'**Organisation nationale de lutte contre le faux-monnayage (ONCFM)**. Cette institution cherche à mettre en place une modélisation capable d'identifier automatiquement les faux billets en euros en se basant uniquement sur certaines dimensions et caractéristiques physiques des billets.
+En tant que **consultant Data Analyst** en mission pour l'**Organisation nationale de lutte contre le faux-monnayage (ONCFM)**, j’ai été chargé de développer un système de détection automatisée des **faux billets en euros**.  
+Ce projet s’inscrit dans une démarche de sécurisation monétaire, pilotée par **Marie**, responsable du projet data à l’ONCFM.
 
-Dans le cadre de cette mission, je travaille sous la supervision de **Marie**, responsable du projet d’analyse de données à l’ONCFM. Elle m'accorde une grande autonomie pour explorer différentes approches de modélisation et souhaite une présentation finale des résultats incluant les analyses réalisées, les pistes explorées, et le modèle final sélectionné.
+La mission consistait à explorer différentes approches de modélisation afin de produire un **modèle de classification performant**, basé sur les caractéristiques physiques des billets.
 
-## Objectifs du Projet
+## 🎯 Objectifs de la mission
 
-1. **Préparation et Nettoyage des Données** : Explorer et nettoyer les données pour assurer leur qualité, notamment en traitant les valeurs manquantes et en vérifiant la cohérence des dimensions et caractéristiques des billets.
-   
-2. **Exploration et Analyse des Données** : Analyser les données pour identifier les patterns et différences entre les vrais et faux billets, afin de guider la sélection des variables et des méthodes de modélisation.
+1. Nettoyer et analyser le jeu de données fourni par l’ONCFM
+2. Identifier les variables les plus discriminantes pour la classification
+3. Développer et comparer plusieurs **modèles de machine learning**
+4. Fournir une présentation synthétique et exploitable des résultats finaux
 
-3. **Développement d'un Modèle de Classification** : Construire un modèle de machine learning capable de classer les billets en « vrai » ou « faux ». Plusieurs approches de modélisation seront explorées pour comparer leurs performances.
+## 🧩 Étapes de réalisation
 
-4. **Présentation des Résultats** : Présenter les résultats finaux à Marie, incluant le modèle choisi, les analyses préalables, et les pistes explorées.
+### 1. Préparation et nettoyage des données
 
-## Étapes du Projet
+- Traitement des **valeurs manquantes**
+- Détection et gestion des **outliers**
+- Validation de la cohérence des caractéristiques physiques des billets
 
-### Étape 1 : Préparation et Nettoyage des Données
+### 2. Analyse exploratoire (EDA)
 
-- **Objectif** : Préparer le jeu de données pour l’analyse en traitant les valeurs manquantes et en effectuant un nettoyage des variables.
-- **Détails** :
-  - Identifier et traiter les valeurs manquantes, en utilisant des méthodes comme la régression linéaire si cela est pertinent (inspiré par le conseil d’un collègue).
-  - Vérifier la cohérence des valeurs pour chaque variable et détecter d’éventuels outliers qui pourraient influencer la modélisation.
-- **Livrable** : Un notebook contenant les étapes de préparation et de nettoyage des données.
+- Visualisation des distributions par variable
+- Comparaison des valeurs selon la classe ("vrai" vs "faux")
+- Identification des **patterns clés** pour orienter la modélisation
 
-### Étape 2 : Analyse Exploratoire des Données (EDA)
+### 3. Modélisation et sélection du modèle
 
-- **Objectif** : Analyser les données pour comprendre les différences entre les vrais et faux billets et sélectionner les caractéristiques les plus pertinentes pour la modélisation.
-- **Détails** :
-  - Examiner la distribution des dimensions et autres caractéristiques des billets.
-  - Utiliser des visualisations pour identifier les patterns distinctifs entre les vrais et faux billets.
-  - Calculer des statistiques descriptives pour chaque variable et effectuer des tests statistiques si nécessaire.
-- **Livrable** : Un notebook contenant l'analyse exploratoire et les visualisations associées.
+- Tests de plusieurs algorithmes :
+  - Régression logistique
+  - **k-nearest neighbors (KNN)**
+  - **Random Forest**
+  - **Support Vector Machine (SVM)**
+- Comparaison des performances via **précision**, **rappel**, **score F1**
+- Sélection du **modèle le plus robuste** pour la détection automatique
 
-### Étape 3 : Modélisation et Sélection du Modèle
+### 4. Présentation des résultats
 
-- **Objectif** : Construire un modèle de machine learning pour classer les billets en vrais ou faux.
-- **Méthodes** :
-  - Tester plusieurs modèles de classification, tels que **régression logistique**, **k-nearest neighbors (KNN)**, **forêts aléatoires (Random Forest)**, et **SVM (Support Vector Machine)**.
-  - Comparer les performances des modèles à l'aide de métriques telles que la précision, le rappel et le score F1.
-  - Affiner le modèle sélectionné pour maximiser sa capacité de détection des faux billets.
-- **Livrable** : Un notebook contenant les différentes étapes de modélisation, les performances des modèles testés, et le modèle final retenu.
+- Création d’un **support visuel** à destination de Marie (PowerPoint ou rapport structuré)
+- Explication du processus d’analyse et de modélisation
+- Recommandations basées sur les performances du modèle retenu
 
-### Étape 4 : Présentation des Résultats
+## 📂 Livrables
 
-- **Objectif** : Présenter les résultats du projet à Marie, en expliquant la méthodologie, les analyses, et le modèle final de manière compréhensible pour les parties prenantes.
-- **Détails** :
-  - Expliquer les étapes de préparation et d’analyse des données.
-  - Présenter les modèles explorés et les performances de chacun.
-  - Justifier le choix du modèle final et interpréter les résultats pour la détection des faux billets.
-- **Livrable** : Présentation PowerPoint ou document structuré contenant un résumé des résultats et recommandations.
+- **Notebook Python** :
+  - Préparation et nettoyage des données
+  - Analyse exploratoire
+  - Modélisation + comparaison des algorithmes
+- **Présentation synthétique** des résultats à destination de l’ONCFM
+- **Fichier final** avec le modèle sélectionné et prêt à l’usage
 
-## Détails Techniques
+## 🛠️ Compétences mobilisées
 
-- **Fichiers** :
-  - `Dataset Faux Billets` : Jeu de données fourni par l'ONCFM, contenant les caractéristiques physiques des billets en euros.
-  - **Notebook de Préparation des Données** : Document de travail contenant les étapes de nettoyage et d'analyse exploratoire.
-  - **Notebook de Modélisation** : Document de travail pour le développement et la comparaison des modèles de classification.
+- Analyse exploratoire de données (EDA)
+- Préparation et nettoyage de jeux de données
+- Modélisation supervisée en classification binaire
+- Évaluation de modèles (précision, rappel, score F1)
+- Communication claire des résultats et des insights
 
-- **Outils Utilisés** :
-  - Langage de programmation : **Python** ou **R** (selon le choix pour le développement du modèle).
-  - **Algorithmes de Machine Learning** : Régression logistique, k-nearest neighbors, Random Forest, SVM.
-  - **Visualisation de données** : Pour l’analyse exploratoire et la présentation des résultats.
+## ✅ Résultats et impact
 
-- **Compétences Utilisées** :
-  - Préparation et nettoyage de données.
-  - Analyse exploratoire pour comprendre les différences entre vrais et faux billets.
-  - Développement de modèles de machine learning pour la classification.
-  - Communication des résultats aux parties prenantes.
+- Développement d’un **modèle de classification performant** pour identifier les faux billets
+- Sélection de variables discriminantes pour améliorer la fiabilité
+- **Support stratégique** à l’ONCFM dans leur lutte contre le faux-monnayage
+- Valorisation de l’expertise data au service de la sécurité monétaire
 
-## Résumé
+---
 
-Ce projet vise à développer un modèle de classification capable de détecter automatiquement les faux billets en euros. En explorant différentes méthodes de modélisation et en sélectionnant les caractéristiques les plus pertinentes, je fournirai à l’ONCFM une solution data-driven pour lutter contre la contrefaçon des billets. Les résultats de cette mission soutiendront les efforts de l'ONCFM dans la détection des contrefaçons, renforçant ainsi la sécurité financière.
+## 🔍 Aperçu
+
+> Ce projet illustre ma capacité à transformer des données brutes en **solutions d’intelligence artificielle concrètes**, au service d’enjeux de sécurité publique.
+
+---
+
+*Mission réalisée dans un cadre professionnel simulé, avec des responsabilités équivalentes à celles d’un Data Analyst en institution nationale.*
